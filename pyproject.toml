@@ -161,3 +161,9 @@ requires = ["hatchling"]
 [tool.hatch.build.targets.wheel]
 # CUSTOM: Must match src/ folders.
 packages = ["src/streaming"]  # REQ.PACKAGES: Discovery rooted at src/.
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+streaming = { path = "src/streaming" }
