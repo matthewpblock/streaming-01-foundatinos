@@ -182,3 +182,2974 @@
 2026-05-16 08:04:34 | INFO | C01 | ========================
 2026-05-16 08:04:34 | INFO | C01 | Consumer executed successfully!
 2026-05-16 08:04:34 | INFO | C01 | ========================
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:38:37 | DEBUG | P01 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-17 08:38:37 | DEBUG | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-17 08:38:37 | DEBUG | P01 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-17 08:38:37 | DEBUG | P01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:38:37 | DEBUG | P01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:38:37 | DEBUG | P01 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-17 08:38:37 | DEBUG | P01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:38:37 | INFO | P01 | === RUN START ===
+2026-05-17 08:38:37 | INFO | P01 | project=P01
+2026-05-17 08:38:37 | INFO | P01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:38:37 | INFO | P01 | python=3.14.4
+2026-05-17 08:38:37 | INFO | P01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:38:37 | INFO | P01 | shell=bash
+2026-05-17 08:38:37 | INFO | P01 | cwd=.
+2026-05-17 08:38:37 | INFO | P01 | github_actions=False
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | START producer main()
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | ROOT_DIR = .
+2026-05-17 08:38:37 | INFO | P01 | DATA_DIR = data
+2026-05-17 08:38:37 | INFO | P01 | SALES_CSV = data/sales.csv
+2026-05-17 08:38:37 | INFO | P01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | SECTION A. Acquire
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | Loading settings from .env...
+2026-05-17 08:38:37 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:38:37 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-17 08:38:37 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-17 08:38:37 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-05-17 08:38:37 | INFO | P01 | Verifying local source data...
+2026-05-17 08:38:37 | INFO | P01 | Source file found: sales.csv
+2026-05-17 08:38:37 | INFO | P01 | Preparing local simulated topic file...
+2026-05-17 08:38:37 | INFO | P01 | Deleted existing topic file: streaming-01-foundations-case.csv
+2026-05-17 08:38:37 | INFO | P01 | Topic file will be created: streaming-01-foundations-case.csv
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | SECTION P. Produce Messages
+2026-05-17 08:38:37 | INFO | P01 | ========================
+2026-05-17 08:38:37 | INFO | P01 | Sending messages...
+2026-05-17 08:38:37 | INFO | P01 | Sending up to 3 local message(s).
+2026-05-17 08:38:37 | INFO | P01 | Writing to simulated topic file: streaming-01-foundations-case.csv
+2026-05-17 08:38:37 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-17 08:38:37 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:38:37 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:38:37 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-17 08:38:39 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:38:39 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:38:39 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-17 08:38:41 | INFO | P01 | {
+  order_id: 14da1915-8e74-47be-9e10-f7275d31af46
+  datetime: 2026-05-04T08:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2133
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:38:41 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:38:41 | INFO | P01 |   MESSAGE SENT  sent=3
+2026-05-17 08:38:43 | INFO | P01 | ========================
+2026-05-17 08:38:43 | INFO | P01 | SECTION E. Exit
+2026-05-17 08:38:43 | INFO | P01 | ========================
+2026-05-17 08:38:43 | INFO | P01 | Summary:
+2026-05-17 08:38:43 | INFO | P01 | Sent 3 message(s).
+2026-05-17 08:38:43 | INFO | P01 | WROTE TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:38:43 | INFO | P01 | ========================
+2026-05-17 08:38:43 | INFO | P01 | Producer executed successfully!
+2026-05-17 08:38:43 | INFO | P01 | ========================
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:38:56 | DEBUG | C01 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-17 08:38:56 | DEBUG | C01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-17 08:38:56 | DEBUG | C01 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-17 08:38:56 | DEBUG | C01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:38:56 | DEBUG | C01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:38:56 | DEBUG | C01 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-17 08:38:56 | DEBUG | C01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:38:56 | INFO | C01 | === RUN START ===
+2026-05-17 08:38:56 | INFO | C01 | project=C01
+2026-05-17 08:38:56 | INFO | C01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:38:56 | INFO | C01 | python=3.14.4
+2026-05-17 08:38:56 | INFO | C01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:38:56 | INFO | C01 | shell=bash
+2026-05-17 08:38:56 | INFO | C01 | cwd=.
+2026-05-17 08:38:56 | INFO | C01 | github_actions=False
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | START consumer main()
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | ROOT_DIR = .
+2026-05-17 08:38:56 | INFO | C01 | DATA_DIR = data
+2026-05-17 08:38:56 | INFO | C01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:38:56 | INFO | C01 | OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | SECTION A. Acquire
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | Loading settings from .env...
+2026-05-17 08:38:56 | INFO | C01 | KAFKA_TOPIC                    = streaming-01-foundations-case
+2026-05-17 08:38:56 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 1000
+2026-05-17 08:38:56 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-17 08:38:56 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 10.0
+2026-05-17 08:38:56 | INFO | C01 | Verifying local simulated topic file...
+2026-05-17 08:38:56 | INFO | C01 | Topic file found: streaming-01-foundations-case.csv
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | SECTION C. Consume and Process Messages
+2026-05-17 08:38:56 | INFO | C01 | ========================
+2026-05-17 08:38:56 | INFO | C01 | Initializing output...
+2026-05-17 08:38:56 | INFO | C01 | Output CSV cleared: consumed_sales.csv
+2026-05-17 08:38:56 | INFO | C01 | Consuming local messages...
+2026-05-17 08:38:56 | INFO | C01 | Waiting for up to 1000 message(s).
+2026-05-17 08:38:56 | INFO | C01 | Stopping after 10.0s with no new message.
+
+2026-05-17 08:38:56 | INFO | C01 | {'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'datetime': '2026-05-04T08:11:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-4150', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:38:56 | INFO | C01 | Processing raw local message.
+2026-05-17 08:38:56 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:38:56 | INFO | C01 | consumed=1
+2026-05-17 08:38:56 | INFO | C01 | {'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'datetime': '2026-05-04T08:23:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1106', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:38:56 | INFO | C01 | Processing raw local message.
+2026-05-17 08:38:57 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:38:57 | INFO | C01 | consumed=2
+2026-05-17 08:38:57 | INFO | C01 | {'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'datetime': '2026-05-04T08:28:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2133', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:38:57 | INFO | C01 | Processing raw local message.
+2026-05-17 08:38:57 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:38:57 | INFO | C01 | consumed=3
+2026-05-17 08:39:07 | INFO | C01 | No new message received within 10.0s timeout.
+2026-05-17 08:39:07 | INFO | C01 | Producer finished or paused. Stopping consumer.
+2026-05-17 08:39:07 | INFO | C01 | Saving artifacts...
+2026-05-17 08:39:07 | INFO | C01 | WROTE OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:39:07 | INFO | C01 | ========================
+2026-05-17 08:39:07 | INFO | C01 | SECTION E. Exit
+2026-05-17 08:39:07 | INFO | C01 | ========================
+2026-05-17 08:39:07 | INFO | C01 | Summary:
+2026-05-17 08:39:07 | INFO | C01 | Consumed 3 message(s).
+2026-05-17 08:39:07 | INFO | C01 | OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:39:07 | INFO | C01 | ========================
+2026-05-17 08:39:07 | INFO | C01 | Consumer executed successfully!
+2026-05-17 08:39:07 | INFO | C01 | ========================
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:40:54 | DEBUG | P01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:40:54 | DEBUG | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5
+2026-05-17 08:40:54 | DEBUG | P01 | PRODUCER_MAX_MESSAGES             = 100
+2026-05-17 08:40:54 | DEBUG | P01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:40:54 | DEBUG | P01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:40:54 | DEBUG | P01 | CONSUMER_TIMEOUT_SECONDS          = 20
+2026-05-17 08:40:54 | DEBUG | P01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:40:54 | INFO | P01 | === RUN START ===
+2026-05-17 08:40:54 | INFO | P01 | project=P01
+2026-05-17 08:40:54 | INFO | P01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:40:54 | INFO | P01 | python=3.14.4
+2026-05-17 08:40:54 | INFO | P01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:40:54 | INFO | P01 | shell=bash
+2026-05-17 08:40:54 | INFO | P01 | cwd=.
+2026-05-17 08:40:54 | INFO | P01 | github_actions=False
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | START producer main()
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | ROOT_DIR = .
+2026-05-17 08:40:54 | INFO | P01 | DATA_DIR = data
+2026-05-17 08:40:54 | INFO | P01 | SALES_CSV = data/sales.csv
+2026-05-17 08:40:54 | INFO | P01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | SECTION A. Acquire
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | Loading settings from .env...
+2026-05-17 08:40:54 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:40:54 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-17 08:40:54 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:40:54 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5.0
+2026-05-17 08:40:54 | INFO | P01 | Verifying local source data...
+2026-05-17 08:40:54 | INFO | P01 | Source file found: sales.csv
+2026-05-17 08:40:54 | INFO | P01 | Preparing local simulated topic file...
+2026-05-17 08:40:54 | INFO | P01 | Deleted existing topic file: streaming-01-foundations-case.csv
+2026-05-17 08:40:54 | INFO | P01 | Topic file will be created: streaming-01-foundations-case.csv
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | SECTION P. Produce Messages
+2026-05-17 08:40:54 | INFO | P01 | ========================
+2026-05-17 08:40:54 | INFO | P01 | Sending messages...
+2026-05-17 08:40:54 | INFO | P01 | Sending up to 100 local message(s).
+2026-05-17 08:40:54 | INFO | P01 | Writing to simulated topic file: streaming-01-foundations-case.csv
+2026-05-17 08:40:54 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-17 08:40:54 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:40:54 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:40:54 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-17 08:40:59 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:40:59 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:40:59 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-17 08:41:04 | INFO | P01 | {
+  order_id: 14da1915-8e74-47be-9e10-f7275d31af46
+  datetime: 2026-05-04T08:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2133
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:41:04 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:41:04 | INFO | P01 |   MESSAGE SENT  sent=3
+2026-05-17 08:41:09 | INFO | P01 | {
+  order_id: d77ed935-9b28-431d-bc25-0a3fd98f4154
+  datetime: 2026-05-04T08:40:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5333
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Highly recommend
+}
+2026-05-17 08:41:09 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:41:09 | INFO | P01 |   MESSAGE SENT  sent=4
+2026-05-17 08:41:14 | INFO | P01 | {
+  order_id: 24b91995-25f8-4ad7-8fa6-2e4c15750e5e
+  datetime: 2026-05-04T08:41:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8573
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:41:14 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:41:14 | INFO | P01 |   MESSAGE SENT  sent=5
+2026-05-17 08:41:19 | INFO | P01 | {
+  order_id: 1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8
+  datetime: 2026-05-04T08:54:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8062
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:41:19 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:41:19 | INFO | P01 |   MESSAGE SENT  sent=6
+2026-05-17 08:41:24 | INFO | P01 | {
+  order_id: 392dd49b-b385-499c-9b4a-a38387fa39ae
+  datetime: 2026-05-04T09:07:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: false
+  customer_id: CUST-9348
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:41:24 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:41:25 | INFO | P01 |   MESSAGE SENT  sent=7
+2026-05-17 08:41:30 | INFO | P01 | {
+  order_id: 02782ab7-dd7d-4ebe-8abc-ef81cdc4193b
+  datetime: 2026-05-04T09:15:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5889
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:41:30 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:41:30 | INFO | P01 |   MESSAGE SENT  sent=8
+2026-05-17 08:41:35 | INFO | P01 | {
+  order_id: 67bd3492-cc96-429a-9a91-1b4d2132d261
+  datetime: 2026-05-04T09:19:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4770
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Excellent content
+}
+2026-05-17 08:41:35 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:41:35 | INFO | P01 |   MESSAGE SENT  sent=9
+2026-05-17 08:41:40 | INFO | P01 | {
+  order_id: 0a021628-6937-4876-8875-b00c07a39e0f
+  datetime: 2026-05-04T09:37:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6168
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:41:40 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:41:40 | INFO | P01 |   MESSAGE SENT  sent=10
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:41:40 | DEBUG | C01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:41:40 | DEBUG | C01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5
+2026-05-17 08:41:40 | DEBUG | C01 | PRODUCER_MAX_MESSAGES             = 100
+2026-05-17 08:41:40 | DEBUG | C01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:41:40 | DEBUG | C01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:41:40 | DEBUG | C01 | CONSUMER_TIMEOUT_SECONDS          = 20
+2026-05-17 08:41:40 | DEBUG | C01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:41:40 | INFO | C01 | === RUN START ===
+2026-05-17 08:41:40 | INFO | C01 | project=C01
+2026-05-17 08:41:40 | INFO | C01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:41:40 | INFO | C01 | python=3.14.4
+2026-05-17 08:41:40 | INFO | C01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:41:40 | INFO | C01 | shell=bash
+2026-05-17 08:41:40 | INFO | C01 | cwd=.
+2026-05-17 08:41:40 | INFO | C01 | github_actions=False
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | START consumer main()
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | ROOT_DIR = .
+2026-05-17 08:41:40 | INFO | C01 | DATA_DIR = data
+2026-05-17 08:41:40 | INFO | C01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:41:40 | INFO | C01 | OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | SECTION A. Acquire
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | Loading settings from .env...
+2026-05-17 08:41:40 | INFO | C01 | KAFKA_TOPIC                    = streaming-01-foundations-case
+2026-05-17 08:41:40 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 1000
+2026-05-17 08:41:40 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-17 08:41:40 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 20.0
+2026-05-17 08:41:40 | INFO | C01 | Verifying local simulated topic file...
+2026-05-17 08:41:40 | INFO | C01 | Topic file found: streaming-01-foundations-case.csv
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | SECTION C. Consume and Process Messages
+2026-05-17 08:41:40 | INFO | C01 | ========================
+2026-05-17 08:41:40 | INFO | C01 | Initializing output...
+2026-05-17 08:41:40 | INFO | C01 | Output CSV cleared: consumed_sales.csv
+2026-05-17 08:41:40 | INFO | C01 | Consuming local messages...
+2026-05-17 08:41:40 | INFO | C01 | Waiting for up to 1000 message(s).
+2026-05-17 08:41:40 | INFO | C01 | Stopping after 20.0s with no new message.
+
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'datetime': '2026-05-04T08:11:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-4150', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=1
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'datetime': '2026-05-04T08:23:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1106', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=2
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'datetime': '2026-05-04T08:28:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2133', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=3
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': 'd77ed935-9b28-431d-bc25-0a3fd98f4154', 'datetime': '2026-05-04T08:40:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5333', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Highly recommend'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=4
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '24b91995-25f8-4ad7-8fa6-2e4c15750e5e', 'datetime': '2026-05-04T08:41:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8573', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=5
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8', 'datetime': '2026-05-04T08:54:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8062', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=6
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '392dd49b-b385-499c-9b4a-a38387fa39ae', 'datetime': '2026-05-04T09:07:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'false', 'customer_id': 'CUST-9348', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=7
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '02782ab7-dd7d-4ebe-8abc-ef81cdc4193b', 'datetime': '2026-05-04T09:15:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5889', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=8
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '67bd3492-cc96-429a-9a91-1b4d2132d261', 'datetime': '2026-05-04T09:19:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4770', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Excellent content'}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=9
+2026-05-17 08:41:40 | INFO | C01 | {'order_id': '0a021628-6937-4876-8875-b00c07a39e0f', 'datetime': '2026-05-04T09:37:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6168', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:41:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:40 | INFO | C01 | consumed=10
+2026-05-17 08:41:45 | INFO | P01 | {
+  order_id: b05fc600-a5fc-4826-934c-cc1f188b0715
+  datetime: 2026-05-04T09:42:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-3340
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:41:45 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:41:45 | INFO | P01 |   MESSAGE SENT  sent=11
+2026-05-17 08:41:45 | INFO | C01 | {'order_id': 'b05fc600-a5fc-4826-934c-cc1f188b0715', 'datetime': '2026-05-04T09:42:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-3340', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:41:45 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:45 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:45 | INFO | C01 | consumed=11
+2026-05-17 08:41:50 | INFO | P01 | {
+  order_id: 03d437fb-6966-47ad-a67a-728630c8b3f8
+  datetime: 2026-05-04T10:06:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8668
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: email
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:41:50 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:41:50 | INFO | P01 |   MESSAGE SENT  sent=12
+2026-05-17 08:41:50 | INFO | C01 | {'order_id': '03d437fb-6966-47ad-a67a-728630c8b3f8', 'datetime': '2026-05-04T10:06:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8668', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'email', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:41:50 | INFO | C01 | Processing raw local message.
+2026-05-17 08:41:50 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:41:50 | INFO | C01 | consumed=12
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:42:12 | DEBUG | P01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:42:12 | DEBUG | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5
+2026-05-17 08:42:12 | DEBUG | P01 | PRODUCER_MAX_MESSAGES             = 100
+2026-05-17 08:42:12 | DEBUG | P01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:42:12 | DEBUG | P01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:42:12 | DEBUG | P01 | CONSUMER_TIMEOUT_SECONDS          = 20
+2026-05-17 08:42:12 | DEBUG | P01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:42:12 | INFO | P01 | === RUN START ===
+2026-05-17 08:42:12 | INFO | P01 | project=P01
+2026-05-17 08:42:12 | INFO | P01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:42:12 | INFO | P01 | python=3.14.4
+2026-05-17 08:42:12 | INFO | P01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:42:12 | INFO | P01 | shell=bash
+2026-05-17 08:42:12 | INFO | P01 | cwd=.
+2026-05-17 08:42:12 | INFO | P01 | github_actions=False
+2026-05-17 08:42:12 | INFO | P01 | ========================
+2026-05-17 08:42:12 | INFO | P01 | START producer main()
+2026-05-17 08:42:12 | INFO | P01 | ========================
+2026-05-17 08:42:12 | INFO | P01 | ROOT_DIR = .
+2026-05-17 08:42:12 | INFO | P01 | DATA_DIR = data
+2026-05-17 08:42:12 | INFO | P01 | SALES_CSV = data/sales.csv
+2026-05-17 08:42:13 | INFO | P01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:42:13 | INFO | P01 | ========================
+2026-05-17 08:42:13 | INFO | P01 | SECTION A. Acquire
+2026-05-17 08:42:13 | INFO | P01 | ========================
+2026-05-17 08:42:13 | INFO | P01 | Loading settings from .env...
+2026-05-17 08:42:13 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:42:13 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-17 08:42:13 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:42:13 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5.0
+2026-05-17 08:42:13 | INFO | P01 | Verifying local source data...
+2026-05-17 08:42:13 | INFO | P01 | Source file found: sales.csv
+2026-05-17 08:42:13 | INFO | P01 | Preparing local simulated topic file...
+2026-05-17 08:42:13 | INFO | P01 | Deleted existing topic file: streaming-01-foundations-case.csv
+2026-05-17 08:42:13 | INFO | P01 | Topic file will be created: streaming-01-foundations-case.csv
+2026-05-17 08:42:13 | INFO | P01 | ========================
+2026-05-17 08:42:13 | INFO | P01 | SECTION P. Produce Messages
+2026-05-17 08:42:13 | INFO | P01 | ========================
+2026-05-17 08:42:13 | INFO | P01 | Sending messages...
+2026-05-17 08:42:13 | INFO | P01 | Sending up to 100 local message(s).
+2026-05-17 08:42:13 | INFO | P01 | Writing to simulated topic file: streaming-01-foundations-case.csv
+2026-05-17 08:42:13 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-17 08:42:13 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:42:13 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:42:13 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-17 08:42:18 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:42:18 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:42:18 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-17 08:42:23 | INFO | P01 | {
+  order_id: 14da1915-8e74-47be-9e10-f7275d31af46
+  datetime: 2026-05-04T08:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2133
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:42:23 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:42:23 | INFO | P01 |   MESSAGE SENT  sent=3
+2026-05-17 08:42:28 | INFO | P01 | {
+  order_id: d77ed935-9b28-431d-bc25-0a3fd98f4154
+  datetime: 2026-05-04T08:40:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5333
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Highly recommend
+}
+2026-05-17 08:42:28 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:42:28 | INFO | P01 |   MESSAGE SENT  sent=4
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_TOPIC                       = streaming-01-foundations-case
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-17 08:42:28 | DEBUG | C01 | PRODUCER_MESSAGE_COUNT            = 100
+2026-05-17 08:42:28 | DEBUG | C01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 5
+2026-05-17 08:42:28 | DEBUG | C01 | PRODUCER_MAX_MESSAGES             = 100
+2026-05-17 08:42:28 | DEBUG | C01 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-17 08:42:28 | DEBUG | C01 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-17 08:42:28 | DEBUG | C01 | CONSUMER_TIMEOUT_SECONDS          = 20
+2026-05-17 08:42:28 | DEBUG | C01 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-17 08:42:28 | INFO | C01 | === RUN START ===
+2026-05-17 08:42:28 | INFO | C01 | project=C01
+2026-05-17 08:42:28 | INFO | C01 | repo_dir=streaming-01-foundatinos
+2026-05-17 08:42:28 | INFO | C01 | python=3.14.4
+2026-05-17 08:42:28 | INFO | C01 | os=Linux 6.6.114.1-microsoft-standard-WSL2
+2026-05-17 08:42:28 | INFO | C01 | shell=bash
+2026-05-17 08:42:28 | INFO | C01 | cwd=.
+2026-05-17 08:42:28 | INFO | C01 | github_actions=False
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | START consumer main()
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | ROOT_DIR = .
+2026-05-17 08:42:28 | INFO | C01 | DATA_DIR = data
+2026-05-17 08:42:28 | INFO | C01 | TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:42:28 | INFO | C01 | OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | SECTION A. Acquire
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | Loading settings from .env...
+2026-05-17 08:42:28 | INFO | C01 | KAFKA_TOPIC                    = streaming-01-foundations-case
+2026-05-17 08:42:28 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 1000
+2026-05-17 08:42:28 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-17 08:42:28 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 20.0
+2026-05-17 08:42:28 | INFO | C01 | Verifying local simulated topic file...
+2026-05-17 08:42:28 | INFO | C01 | Topic file found: streaming-01-foundations-case.csv
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | SECTION C. Consume and Process Messages
+2026-05-17 08:42:28 | INFO | C01 | ========================
+2026-05-17 08:42:28 | INFO | C01 | Initializing output...
+2026-05-17 08:42:28 | INFO | C01 | Output CSV cleared: consumed_sales.csv
+2026-05-17 08:42:28 | INFO | C01 | Consuming local messages...
+2026-05-17 08:42:28 | INFO | C01 | Waiting for up to 1000 message(s).
+2026-05-17 08:42:28 | INFO | C01 | Stopping after 20.0s with no new message.
+
+2026-05-17 08:42:28 | INFO | C01 | {'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'datetime': '2026-05-04T08:11:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-4150', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:42:28 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:28 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:28 | INFO | C01 | consumed=1
+2026-05-17 08:42:28 | INFO | C01 | {'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'datetime': '2026-05-04T08:23:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1106', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:42:28 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:28 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:28 | INFO | C01 | consumed=2
+2026-05-17 08:42:28 | INFO | C01 | {'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'datetime': '2026-05-04T08:28:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2133', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:42:28 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:28 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:28 | INFO | C01 | consumed=3
+2026-05-17 08:42:28 | INFO | C01 | {'order_id': 'd77ed935-9b28-431d-bc25-0a3fd98f4154', 'datetime': '2026-05-04T08:40:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5333', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Highly recommend'}
+2026-05-17 08:42:28 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:28 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:28 | INFO | C01 | consumed=4
+2026-05-17 08:42:33 | INFO | P01 | {
+  order_id: 24b91995-25f8-4ad7-8fa6-2e4c15750e5e
+  datetime: 2026-05-04T08:41:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8573
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:42:33 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:42:33 | INFO | P01 |   MESSAGE SENT  sent=5
+2026-05-17 08:42:33 | INFO | C01 | {'order_id': '24b91995-25f8-4ad7-8fa6-2e4c15750e5e', 'datetime': '2026-05-04T08:41:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8573', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:42:33 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:33 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:33 | INFO | C01 | consumed=5
+2026-05-17 08:42:38 | INFO | P01 | {
+  order_id: 1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8
+  datetime: 2026-05-04T08:54:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8062
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:42:38 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:42:38 | INFO | P01 |   MESSAGE SENT  sent=6
+2026-05-17 08:42:38 | INFO | C01 | {'order_id': '1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8', 'datetime': '2026-05-04T08:54:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8062', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:42:38 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:38 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:38 | INFO | C01 | consumed=6
+2026-05-17 08:42:43 | INFO | P01 | {
+  order_id: 392dd49b-b385-499c-9b4a-a38387fa39ae
+  datetime: 2026-05-04T09:07:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: false
+  customer_id: CUST-9348
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:42:43 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:42:43 | INFO | P01 |   MESSAGE SENT  sent=7
+2026-05-17 08:42:43 | INFO | C01 | {'order_id': '392dd49b-b385-499c-9b4a-a38387fa39ae', 'datetime': '2026-05-04T09:07:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'false', 'customer_id': 'CUST-9348', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:42:43 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:43 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:43 | INFO | C01 | consumed=7
+2026-05-17 08:42:48 | INFO | P01 | {
+  order_id: 02782ab7-dd7d-4ebe-8abc-ef81cdc4193b
+  datetime: 2026-05-04T09:15:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5889
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:42:48 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:42:48 | INFO | P01 |   MESSAGE SENT  sent=8
+2026-05-17 08:42:48 | INFO | C01 | {'order_id': '02782ab7-dd7d-4ebe-8abc-ef81cdc4193b', 'datetime': '2026-05-04T09:15:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5889', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:42:48 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:48 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:48 | INFO | C01 | consumed=8
+2026-05-17 08:42:53 | INFO | P01 | {
+  order_id: 67bd3492-cc96-429a-9a91-1b4d2132d261
+  datetime: 2026-05-04T09:19:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4770
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Excellent content
+}
+2026-05-17 08:42:53 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:42:53 | INFO | P01 |   MESSAGE SENT  sent=9
+2026-05-17 08:42:53 | INFO | C01 | {'order_id': '67bd3492-cc96-429a-9a91-1b4d2132d261', 'datetime': '2026-05-04T09:19:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4770', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Excellent content'}
+2026-05-17 08:42:53 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:53 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:53 | INFO | C01 | consumed=9
+2026-05-17 08:42:58 | INFO | P01 | {
+  order_id: 0a021628-6937-4876-8875-b00c07a39e0f
+  datetime: 2026-05-04T09:37:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6168
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:42:58 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:42:58 | INFO | P01 |   MESSAGE SENT  sent=10
+2026-05-17 08:42:58 | INFO | C01 | {'order_id': '0a021628-6937-4876-8875-b00c07a39e0f', 'datetime': '2026-05-04T09:37:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6168', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:42:58 | INFO | C01 | Processing raw local message.
+2026-05-17 08:42:58 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:42:58 | INFO | C01 | consumed=10
+2026-05-17 08:43:03 | INFO | P01 | {
+  order_id: b05fc600-a5fc-4826-934c-cc1f188b0715
+  datetime: 2026-05-04T09:42:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-3340
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:43:03 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:03 | INFO | P01 |   MESSAGE SENT  sent=11
+2026-05-17 08:43:03 | INFO | C01 | {'order_id': 'b05fc600-a5fc-4826-934c-cc1f188b0715', 'datetime': '2026-05-04T09:42:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-3340', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:43:03 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:03 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:03 | INFO | C01 | consumed=11
+2026-05-17 08:43:08 | INFO | P01 | {
+  order_id: 03d437fb-6966-47ad-a67a-728630c8b3f8
+  datetime: 2026-05-04T10:06:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8668
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: email
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:43:08 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:08 | INFO | P01 |   MESSAGE SENT  sent=12
+2026-05-17 08:43:08 | INFO | C01 | {'order_id': '03d437fb-6966-47ad-a67a-728630c8b3f8', 'datetime': '2026-05-04T10:06:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8668', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'email', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:43:08 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:08 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:08 | INFO | C01 | consumed=12
+2026-05-17 08:43:13 | INFO | P01 | {
+  order_id: 6914aea4-448f-4dc1-b68f-0fe4a2c06188
+  datetime: 2026-05-04T10:15:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2827
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:43:13 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:43:13 | INFO | P01 |   MESSAGE SENT  sent=13
+2026-05-17 08:43:13 | INFO | C01 | {'order_id': '6914aea4-448f-4dc1-b68f-0fe4a2c06188', 'datetime': '2026-05-04T10:15:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2827', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:43:13 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:13 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:13 | INFO | C01 | consumed=13
+2026-05-17 08:43:18 | INFO | P01 | {
+  order_id: e1adb233-3aa8-4d60-9684-1ddf52e9d656
+  datetime: 2026-05-04T10:16:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 5
+  is_online: false
+  customer_id: CUST-4295
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:43:18 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:18 | INFO | P01 |   MESSAGE SENT  sent=14
+2026-05-17 08:43:18 | INFO | C01 | {'order_id': 'e1adb233-3aa8-4d60-9684-1ddf52e9d656', 'datetime': '2026-05-04T10:16:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '5', 'is_online': 'false', 'customer_id': 'CUST-4295', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:43:18 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:18 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:18 | INFO | C01 | consumed=14
+2026-05-17 08:43:23 | INFO | P01 | {
+  order_id: 80e9a9ea-9add-4d51-981a-d26aaacd4dc9
+  datetime: 2026-05-04T10:30:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8953
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:43:23 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:23 | INFO | P01 |   MESSAGE SENT  sent=15
+2026-05-17 08:43:23 | INFO | C01 | {'order_id': '80e9a9ea-9add-4d51-981a-d26aaacd4dc9', 'datetime': '2026-05-04T10:30:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8953', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:43:23 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:23 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:23 | INFO | C01 | consumed=15
+2026-05-17 08:43:28 | INFO | P01 | {
+  order_id: 68920c43-44f0-4e51-bd21-7904c9427810
+  datetime: 2026-05-04T10:43:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1488
+  is_new_customer: true
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:43:28 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:43:28 | INFO | P01 |   MESSAGE SENT  sent=16
+2026-05-17 08:43:28 | INFO | C01 | {'order_id': '68920c43-44f0-4e51-bd21-7904c9427810', 'datetime': '2026-05-04T10:43:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1488', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:43:28 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:28 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:28 | INFO | C01 | consumed=16
+2026-05-17 08:43:33 | INFO | P01 | {
+  order_id: d22acb5c-8fa2-437a-be68-16a3407c5919
+  datetime: 2026-05-04T10:43:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1319
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:43:33 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:33 | INFO | P01 |   MESSAGE SENT  sent=17
+2026-05-17 08:43:34 | INFO | C01 | {'order_id': 'd22acb5c-8fa2-437a-be68-16a3407c5919', 'datetime': '2026-05-04T10:43:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1319', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:43:34 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:34 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:34 | INFO | C01 | consumed=17
+2026-05-17 08:43:38 | INFO | P01 | {
+  order_id: 89715d88-8d25-4fee-9179-438fe49ebd60
+  datetime: 2026-05-04T11:00:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6977
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:43:38 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:43:38 | INFO | P01 |   MESSAGE SENT  sent=18
+2026-05-17 08:43:38 | INFO | C01 | {'order_id': '89715d88-8d25-4fee-9179-438fe49ebd60', 'datetime': '2026-05-04T11:00:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6977', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:43:38 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:38 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:38 | INFO | C01 | consumed=18
+2026-05-17 08:43:43 | INFO | P01 | {
+  order_id: 733e6b9b-c9e7-49ef-82d8-b976d0df90cc
+  datetime: 2026-05-04T11:06:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9099
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:43:43 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:43:43 | INFO | P01 |   MESSAGE SENT  sent=19
+2026-05-17 08:43:43 | INFO | C01 | {'order_id': '733e6b9b-c9e7-49ef-82d8-b976d0df90cc', 'datetime': '2026-05-04T11:06:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9099', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:43:43 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:44 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:44 | INFO | C01 | consumed=19
+2026-05-17 08:43:48 | INFO | P01 | {
+  order_id: 267b5686-afa9-4ce6-bf68-4b861afa6a29
+  datetime: 2026-05-04T11:10:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 5
+  is_online: true
+  customer_id: CUST-4878
+  is_new_customer: true
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: email
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:43:48 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:48 | INFO | P01 |   MESSAGE SENT  sent=20
+2026-05-17 08:43:49 | INFO | C01 | {'order_id': '267b5686-afa9-4ce6-bf68-4b861afa6a29', 'datetime': '2026-05-04T11:10:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '5', 'is_online': 'true', 'customer_id': 'CUST-4878', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:43:49 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:49 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:49 | INFO | C01 | consumed=20
+2026-05-17 08:43:53 | INFO | P01 | {
+  order_id: d6710a67-a351-4185-8d11-3b4e71407f5b
+  datetime: 2026-05-04T11:12:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7570
+  is_new_customer: true
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: Excellent content
+}
+2026-05-17 08:43:53 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:43:53 | INFO | P01 |   MESSAGE SENT  sent=21
+2026-05-17 08:43:53 | INFO | C01 | {'order_id': 'd6710a67-a351-4185-8d11-3b4e71407f5b', 'datetime': '2026-05-04T11:12:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7570', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Excellent content'}
+2026-05-17 08:43:53 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:53 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:53 | INFO | C01 | consumed=21
+2026-05-17 08:43:58 | INFO | P01 | {
+  order_id: cbe8f6e2-a71e-4d62-9004-4dbbf6eb5cfe
+  datetime: 2026-05-04T11:15:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 5
+  is_online: false
+  customer_id: CUST-8973
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: Expected more content
+}
+2026-05-17 08:43:58 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:43:58 | INFO | P01 |   MESSAGE SENT  sent=22
+2026-05-17 08:43:59 | INFO | C01 | {'order_id': 'cbe8f6e2-a71e-4d62-9004-4dbbf6eb5cfe', 'datetime': '2026-05-04T11:15:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '5', 'is_online': 'false', 'customer_id': 'CUST-8973', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Expected more content'}
+2026-05-17 08:43:59 | INFO | C01 | Processing raw local message.
+2026-05-17 08:43:59 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:43:59 | INFO | C01 | consumed=22
+2026-05-17 08:44:03 | INFO | P01 | {
+  order_id: 09bc34b3-c566-400b-bc7b-c114a4a63983
+  datetime: 2026-05-04T11:23:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1158
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: Love the examples
+}
+2026-05-17 08:44:03 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:44:03 | INFO | P01 |   MESSAGE SENT  sent=23
+2026-05-17 08:44:04 | INFO | C01 | {'order_id': '09bc34b3-c566-400b-bc7b-c114a4a63983', 'datetime': '2026-05-04T11:23:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1158', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Love the examples'}
+2026-05-17 08:44:04 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:04 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:04 | INFO | C01 | consumed=23
+2026-05-17 08:44:08 | INFO | P01 | {
+  order_id: 891a7917-4541-457a-b0d5-45a3cd33a260
+  datetime: 2026-05-04T11:27:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1832
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:44:08 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:44:09 | INFO | P01 |   MESSAGE SENT  sent=24
+2026-05-17 08:44:09 | INFO | C01 | {'order_id': '891a7917-4541-457a-b0d5-45a3cd33a260', 'datetime': '2026-05-04T11:27:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1832', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:44:09 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:09 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:09 | INFO | C01 | consumed=24
+2026-05-17 08:44:14 | INFO | P01 | {
+  order_id: 5c877bff-f1b6-467b-abc4-23b946a24014
+  datetime: 2026-05-04T11:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6974
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: email
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:44:14 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:44:14 | INFO | P01 |   MESSAGE SENT  sent=25
+2026-05-17 08:44:14 | INFO | C01 | {'order_id': '5c877bff-f1b6-467b-abc4-23b946a24014', 'datetime': '2026-05-04T11:28:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6974', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:44:14 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:14 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:14 | INFO | C01 | consumed=25
+2026-05-17 08:44:19 | INFO | P01 | {
+  order_id: a62c8c45-e0a4-4697-8ca7-b173c7f4487e
+  datetime: 2026-05-04T11:39:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9701
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: Good but could go deeper
+}
+2026-05-17 08:44:19 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:44:19 | INFO | P01 |   MESSAGE SENT  sent=26
+2026-05-17 08:44:19 | INFO | C01 | {'order_id': 'a62c8c45-e0a4-4697-8ca7-b173c7f4487e', 'datetime': '2026-05-04T11:39:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9701', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Good but could go deeper'}
+2026-05-17 08:44:19 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:19 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:19 | INFO | C01 | consumed=26
+2026-05-17 08:44:24 | INFO | P01 | {
+  order_id: 3ae2798c-087b-473c-b120-d2c9d0f7289b
+  datetime: 2026-05-04T11:40:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5033
+  is_new_customer: true
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:44:24 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:44:24 | INFO | P01 |   MESSAGE SENT  sent=27
+2026-05-17 08:44:24 | INFO | C01 | {'order_id': '3ae2798c-087b-473c-b120-d2c9d0f7289b', 'datetime': '2026-05-04T11:40:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5033', 'is_new_customer': 'true', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:44:24 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:24 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:24 | INFO | C01 | consumed=27
+2026-05-17 08:44:29 | INFO | P01 | {
+  order_id: fbf2b25f-c658-4716-88e7-e5574bb71a39
+  datetime: 2026-05-04T11:41:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5065
+  is_new_customer: true
+  device_type: tablet
+  payment_method: paypal
+  referral_source: email
+  discount_code: 
+  customer_note: Good but could go deeper
+}
+2026-05-17 08:44:29 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:44:29 | INFO | P01 |   MESSAGE SENT  sent=28
+2026-05-17 08:44:29 | INFO | C01 | {'order_id': 'fbf2b25f-c658-4716-88e7-e5574bb71a39', 'datetime': '2026-05-04T11:41:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5065', 'is_new_customer': 'true', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Good but could go deeper'}
+2026-05-17 08:44:29 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:29 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:29 | INFO | C01 | consumed=28
+2026-05-17 08:44:34 | INFO | P01 | {
+  order_id: 9eb81520-7ef0-4b18-b6d8-a6083cd5ca58
+  datetime: 2026-05-04T11:43:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3414
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:44:34 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:44:34 | INFO | P01 |   MESSAGE SENT  sent=29
+2026-05-17 08:44:34 | INFO | C01 | {'order_id': '9eb81520-7ef0-4b18-b6d8-a6083cd5ca58', 'datetime': '2026-05-04T11:43:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3414', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:44:34 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:34 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:34 | INFO | C01 | consumed=29
+2026-05-17 08:44:39 | INFO | P01 | {
+  order_id: 2eb467ee-85d9-4ac5-b9d8-376bbba7770b
+  datetime: 2026-05-04T11:57:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9785
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: social
+  discount_code: 
+  customer_note: Love the examples
+}
+2026-05-17 08:44:39 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:44:39 | INFO | P01 |   MESSAGE SENT  sent=30
+2026-05-17 08:44:39 | INFO | C01 | {'order_id': '2eb467ee-85d9-4ac5-b9d8-376bbba7770b', 'datetime': '2026-05-04T11:57:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9785', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Love the examples'}
+2026-05-17 08:44:39 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:39 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:39 | INFO | C01 | consumed=30
+2026-05-17 08:44:44 | INFO | P01 | {
+  order_id: b7c4cb3b-3a5d-434c-b737-20be9efb1c72
+  datetime: 2026-05-04T12:03:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2604
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: paid_search
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:44:44 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:44:44 | INFO | P01 |   MESSAGE SENT  sent=31
+2026-05-17 08:44:44 | INFO | C01 | {'order_id': 'b7c4cb3b-3a5d-434c-b737-20be9efb1c72', 'datetime': '2026-05-04T12:03:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2604', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:44:44 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:44 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:44 | INFO | C01 | consumed=31
+2026-05-17 08:44:49 | INFO | P01 | {
+  order_id: ea5b5880-1df0-4918-8134-bc18553bedaa
+  datetime: 2026-05-04T12:08:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4728
+  is_new_customer: true
+  device_type: desktop
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Already applying this at work
+}
+2026-05-17 08:44:49 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:44:49 | INFO | P01 |   MESSAGE SENT  sent=32
+2026-05-17 08:44:49 | INFO | C01 | {'order_id': 'ea5b5880-1df0-4918-8134-bc18553bedaa', 'datetime': '2026-05-04T12:08:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4728', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Already applying this at work'}
+2026-05-17 08:44:49 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:49 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:49 | INFO | C01 | consumed=32
+2026-05-17 08:44:54 | INFO | P01 | {
+  order_id: d71f2498-1b58-4d6c-8613-e03125f655be
+  datetime: 2026-05-04T12:23:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7653
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: social
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:44:54 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:44:54 | INFO | P01 |   MESSAGE SENT  sent=33
+2026-05-17 08:44:54 | INFO | C01 | {'order_id': 'd71f2498-1b58-4d6c-8613-e03125f655be', 'datetime': '2026-05-04T12:23:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7653', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'social', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:44:54 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:54 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:54 | INFO | C01 | consumed=33
+2026-05-17 08:44:59 | INFO | P01 | {
+  order_id: 6cf3770d-340a-4b36-a1ff-c0e73ceaaf0e
+  datetime: 2026-05-04T12:24:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6139
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: Love the examples
+}
+2026-05-17 08:44:59 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:44:59 | INFO | P01 |   MESSAGE SENT  sent=34
+2026-05-17 08:44:59 | INFO | C01 | {'order_id': '6cf3770d-340a-4b36-a1ff-c0e73ceaaf0e', 'datetime': '2026-05-04T12:24:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6139', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Love the examples'}
+2026-05-17 08:44:59 | INFO | C01 | Processing raw local message.
+2026-05-17 08:44:59 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:44:59 | INFO | C01 | consumed=34
+2026-05-17 08:45:04 | INFO | P01 | {
+  order_id: 5e687b11-93d6-4999-94eb-835827055b4a
+  datetime: 2026-05-04T12:30:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-2790
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: Very helpful
+}
+2026-05-17 08:45:04 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:45:04 | INFO | P01 |   MESSAGE SENT  sent=35
+2026-05-17 08:45:04 | INFO | C01 | {'order_id': '5e687b11-93d6-4999-94eb-835827055b4a', 'datetime': '2026-05-04T12:30:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-2790', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Very helpful'}
+2026-05-17 08:45:04 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:04 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:04 | INFO | C01 | consumed=35
+2026-05-17 08:45:09 | INFO | P01 | {
+  order_id: d611de65-6c4f-4d98-be66-c2024e9b784d
+  datetime: 2026-05-04T12:33:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7691
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Very helpful
+}
+2026-05-17 08:45:09 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:45:09 | INFO | P01 |   MESSAGE SENT  sent=36
+2026-05-17 08:45:09 | INFO | C01 | {'order_id': 'd611de65-6c4f-4d98-be66-c2024e9b784d', 'datetime': '2026-05-04T12:33:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7691', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Very helpful'}
+2026-05-17 08:45:09 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:09 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:09 | INFO | C01 | consumed=36
+2026-05-17 08:45:14 | INFO | P01 | {
+  order_id: ee5d541b-b139-427b-bbb6-cca7c33f4552
+  datetime: 2026-05-04T12:41:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 5
+  is_online: false
+  customer_id: CUST-2200
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: Great course!
+}
+2026-05-17 08:45:14 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:45:14 | INFO | P01 |   MESSAGE SENT  sent=37
+2026-05-17 08:45:14 | INFO | C01 | {'order_id': 'ee5d541b-b139-427b-bbb6-cca7c33f4552', 'datetime': '2026-05-04T12:41:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '5', 'is_online': 'false', 'customer_id': 'CUST-2200', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Great course!'}
+2026-05-17 08:45:14 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:14 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:14 | INFO | C01 | consumed=37
+2026-05-17 08:45:19 | INFO | P01 | {
+  order_id: 13c46aba-5aeb-496f-b169-39b2cb940b18
+  datetime: 2026-05-04T12:42:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9486
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: email
+  discount_code: 
+  customer_note: Very helpful
+}
+2026-05-17 08:45:19 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:45:19 | INFO | P01 |   MESSAGE SENT  sent=38
+2026-05-17 08:45:19 | INFO | C01 | {'order_id': '13c46aba-5aeb-496f-b169-39b2cb940b18', 'datetime': '2026-05-04T12:42:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9486', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Very helpful'}
+2026-05-17 08:45:19 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:19 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:19 | INFO | C01 | consumed=38
+2026-05-17 08:45:24 | INFO | P01 | {
+  order_id: a1ecdada-a22f-43fe-a98b-275327c2b035
+  datetime: 2026-05-04T12:51:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4228
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:45:24 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:45:24 | INFO | P01 |   MESSAGE SENT  sent=39
+2026-05-17 08:45:24 | INFO | C01 | {'order_id': 'a1ecdada-a22f-43fe-a98b-275327c2b035', 'datetime': '2026-05-04T12:51:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4228', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:45:24 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:24 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:24 | INFO | C01 | consumed=39
+2026-05-17 08:45:29 | INFO | P01 | {
+  order_id: be4612b4-429e-4573-8a1a-1b2b7cbcc28e
+  datetime: 2026-05-04T12:58:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8251
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:45:29 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:45:29 | INFO | P01 |   MESSAGE SENT  sent=40
+2026-05-17 08:45:29 | INFO | C01 | {'order_id': 'be4612b4-429e-4573-8a1a-1b2b7cbcc28e', 'datetime': '2026-05-04T12:58:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8251', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:45:29 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:29 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:29 | INFO | C01 | consumed=40
+2026-05-17 08:45:34 | INFO | P01 | {
+  order_id: 4f68b52f-5f79-48aa-8984-dfffe3c6f167
+  datetime: 2026-05-04T13:17:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5956
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: Slower than I expected
+}
+2026-05-17 08:45:34 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:45:34 | INFO | P01 |   MESSAGE SENT  sent=41
+2026-05-17 08:45:34 | INFO | C01 | {'order_id': '4f68b52f-5f79-48aa-8984-dfffe3c6f167', 'datetime': '2026-05-04T13:17:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5956', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Slower than I expected'}
+2026-05-17 08:45:34 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:34 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:34 | INFO | C01 | consumed=41
+2026-05-17 08:45:39 | INFO | P01 | {
+  order_id: 52b2092c-89bb-428b-a7a4-2b024e7c8521
+  datetime: 2026-05-04T13:20:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8752
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Good but could go deeper
+}
+2026-05-17 08:45:39 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:45:39 | INFO | P01 |   MESSAGE SENT  sent=42
+2026-05-17 08:45:39 | INFO | C01 | {'order_id': '52b2092c-89bb-428b-a7a4-2b024e7c8521', 'datetime': '2026-05-04T13:20:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8752', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Good but could go deeper'}
+2026-05-17 08:45:39 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:39 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:39 | INFO | C01 | consumed=42
+2026-05-17 08:45:44 | INFO | P01 | {
+  order_id: baabebfe-7225-412e-ad8e-25d8eea97659
+  datetime: 2026-05-04T13:28:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-5351
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:45:44 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:45:44 | INFO | P01 |   MESSAGE SENT  sent=43
+2026-05-17 08:45:44 | INFO | C01 | {'order_id': 'baabebfe-7225-412e-ad8e-25d8eea97659', 'datetime': '2026-05-04T13:28:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-5351', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:45:44 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:44 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:44 | INFO | C01 | consumed=43
+2026-05-17 08:45:49 | INFO | P01 | {
+  order_id: 5e3bb592-7961-42ae-b9d0-7460a9187473
+  datetime: 2026-05-04T13:36:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 4
+  is_online: true
+  customer_id: CUST-2891
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:45:49 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:45:49 | INFO | P01 |   MESSAGE SENT  sent=44
+2026-05-17 08:45:49 | INFO | C01 | {'order_id': '5e3bb592-7961-42ae-b9d0-7460a9187473', 'datetime': '2026-05-04T13:36:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '4', 'is_online': 'true', 'customer_id': 'CUST-2891', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:45:49 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:49 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:49 | INFO | C01 | consumed=44
+2026-05-17 08:45:54 | INFO | P01 | {
+  order_id: 98e30deb-4608-4d70-80d6-6dfc3488abe0
+  datetime: 2026-05-04T13:36:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5050
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Worth every penny
+}
+2026-05-17 08:45:54 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:45:54 | INFO | P01 |   MESSAGE SENT  sent=45
+2026-05-17 08:45:55 | INFO | C01 | {'order_id': '98e30deb-4608-4d70-80d6-6dfc3488abe0', 'datetime': '2026-05-04T13:36:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5050', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Worth every penny'}
+2026-05-17 08:45:55 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:55 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:55 | INFO | C01 | consumed=45
+2026-05-17 08:45:59 | INFO | P01 | {
+  order_id: c63829e5-d98f-4d61-94ff-9eee84858af9
+  datetime: 2026-05-04T13:43:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9849
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:45:59 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:45:59 | INFO | P01 |   MESSAGE SENT  sent=46
+2026-05-17 08:45:59 | INFO | C01 | {'order_id': 'c63829e5-d98f-4d61-94ff-9eee84858af9', 'datetime': '2026-05-04T13:43:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9849', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:45:59 | INFO | C01 | Processing raw local message.
+2026-05-17 08:45:59 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:45:59 | INFO | C01 | consumed=46
+2026-05-17 08:46:04 | INFO | P01 | {
+  order_id: e6093d4b-9f32-463a-a245-85f0c8e47fb9
+  datetime: 2026-05-04T14:17:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-8135
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Slower than I expected
+}
+2026-05-17 08:46:04 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:46:04 | INFO | P01 |   MESSAGE SENT  sent=47
+2026-05-17 08:46:04 | INFO | C01 | {'order_id': 'e6093d4b-9f32-463a-a245-85f0c8e47fb9', 'datetime': '2026-05-04T14:17:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-8135', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Slower than I expected'}
+2026-05-17 08:46:04 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:04 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:04 | INFO | C01 | consumed=47
+2026-05-17 08:46:09 | INFO | P01 | {
+  order_id: 76698ca8-703d-4ed1-ab59-159cee460b3a
+  datetime: 2026-05-04T14:20:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7883
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:46:09 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:46:09 | INFO | P01 |   MESSAGE SENT  sent=48
+2026-05-17 08:46:10 | INFO | C01 | {'order_id': '76698ca8-703d-4ed1-ab59-159cee460b3a', 'datetime': '2026-05-04T14:20:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7883', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:46:10 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:10 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:10 | INFO | C01 | consumed=48
+2026-05-17 08:46:14 | INFO | P01 | {
+  order_id: cdda7ee3-ba67-43ec-b342-66905d02c519
+  datetime: 2026-05-04T14:20:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-5051
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Highly recommend
+}
+2026-05-17 08:46:14 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:46:14 | INFO | P01 |   MESSAGE SENT  sent=49
+2026-05-17 08:46:14 | INFO | C01 | {'order_id': 'cdda7ee3-ba67-43ec-b342-66905d02c519', 'datetime': '2026-05-04T14:20:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-5051', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Highly recommend'}
+2026-05-17 08:46:14 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:14 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:14 | INFO | C01 | consumed=49
+2026-05-17 08:46:19 | INFO | P01 | {
+  order_id: 88e83571-ace3-4960-bbff-a31700bda114
+  datetime: 2026-05-04T14:26:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7071
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: email
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:46:19 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:46:19 | INFO | P01 |   MESSAGE SENT  sent=50
+2026-05-17 08:46:19 | INFO | C01 | {'order_id': '88e83571-ace3-4960-bbff-a31700bda114', 'datetime': '2026-05-04T14:26:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7071', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:46:19 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:19 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:19 | INFO | C01 | consumed=50
+2026-05-17 08:46:24 | INFO | P01 | {
+  order_id: 468f9779-61c8-4918-8282-4e070ae8705b
+  datetime: 2026-05-04T14:41:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-4978
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:46:24 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:46:24 | INFO | P01 |   MESSAGE SENT  sent=51
+2026-05-17 08:46:25 | INFO | C01 | {'order_id': '468f9779-61c8-4918-8282-4e070ae8705b', 'datetime': '2026-05-04T14:41:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-4978', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:46:25 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:25 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:25 | INFO | C01 | consumed=51
+2026-05-17 08:46:29 | INFO | P01 | {
+  order_id: d9ec6a6e-8155-4ce8-96c5-446f4dd41c2e
+  datetime: 2026-05-04T14:42:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3223
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: social
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:46:29 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:46:29 | INFO | P01 |   MESSAGE SENT  sent=52
+2026-05-17 08:46:30 | INFO | C01 | {'order_id': 'd9ec6a6e-8155-4ce8-96c5-446f4dd41c2e', 'datetime': '2026-05-04T14:42:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3223', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:46:30 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:30 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:30 | INFO | C01 | consumed=52
+2026-05-17 08:46:34 | INFO | P01 | {
+  order_id: fe65e48b-ac48-4d17-b9ff-bfa9c123bab8
+  datetime: 2026-05-04T14:45:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-6280
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:46:34 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:46:34 | INFO | P01 |   MESSAGE SENT  sent=53
+2026-05-17 08:46:34 | INFO | C01 | {'order_id': 'fe65e48b-ac48-4d17-b9ff-bfa9c123bab8', 'datetime': '2026-05-04T14:45:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-6280', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:46:34 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:34 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:34 | INFO | C01 | consumed=53
+2026-05-17 08:46:39 | INFO | P01 | {
+  order_id: 603a792d-8dad-446d-95b3-e77b11452681
+  datetime: 2026-05-04T14:46:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: false
+  customer_id: CUST-2402
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:46:39 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:46:39 | INFO | P01 |   MESSAGE SENT  sent=54
+2026-05-17 08:46:40 | INFO | C01 | {'order_id': '603a792d-8dad-446d-95b3-e77b11452681', 'datetime': '2026-05-04T14:46:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'false', 'customer_id': 'CUST-2402', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:46:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:40 | INFO | C01 | consumed=54
+2026-05-17 08:46:44 | INFO | P01 | {
+  order_id: 14be4fe3-4f49-40ff-9747-69d8a432f491
+  datetime: 2026-05-04T14:51:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2876
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Already applying this at work
+}
+2026-05-17 08:46:44 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:46:44 | INFO | P01 |   MESSAGE SENT  sent=55
+2026-05-17 08:46:45 | INFO | C01 | {'order_id': '14be4fe3-4f49-40ff-9747-69d8a432f491', 'datetime': '2026-05-04T14:51:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2876', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Already applying this at work'}
+2026-05-17 08:46:45 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:45 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:45 | INFO | C01 | consumed=55
+2026-05-17 08:46:49 | INFO | P01 | {
+  order_id: 92e3f57d-70bb-47b2-8f45-c00baa7d3759
+  datetime: 2026-05-04T15:01:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7625
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:46:49 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:46:49 | INFO | P01 |   MESSAGE SENT  sent=56
+2026-05-17 08:46:49 | INFO | C01 | {'order_id': '92e3f57d-70bb-47b2-8f45-c00baa7d3759', 'datetime': '2026-05-04T15:01:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7625', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:46:49 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:50 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:50 | INFO | C01 | consumed=56
+2026-05-17 08:46:54 | INFO | P01 | {
+  order_id: a781677c-5a0a-4179-ae0c-fcd01f8c6c18
+  datetime: 2026-05-04T15:02:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6325
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:46:54 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:46:55 | INFO | P01 |   MESSAGE SENT  sent=57
+2026-05-17 08:46:55 | INFO | C01 | {'order_id': 'a781677c-5a0a-4179-ae0c-fcd01f8c6c18', 'datetime': '2026-05-04T15:02:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6325', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:46:55 | INFO | C01 | Processing raw local message.
+2026-05-17 08:46:55 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:46:55 | INFO | C01 | consumed=57
+2026-05-17 08:47:00 | INFO | P01 | {
+  order_id: 31b21a55-fc47-4cfb-9d47-f60ec1e320e1
+  datetime: 2026-05-04T15:04:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9595
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:47:00 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:47:00 | INFO | P01 |   MESSAGE SENT  sent=58
+2026-05-17 08:47:00 | INFO | C01 | {'order_id': '31b21a55-fc47-4cfb-9d47-f60ec1e320e1', 'datetime': '2026-05-04T15:04:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9595', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:47:00 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:00 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:00 | INFO | C01 | consumed=58
+2026-05-17 08:47:05 | INFO | P01 | {
+  order_id: c227653e-6b83-438b-90e9-6f1de30ec8e7
+  datetime: 2026-05-04T15:39:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 4
+  is_online: true
+  customer_id: CUST-7389
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:47:05 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:47:05 | INFO | P01 |   MESSAGE SENT  sent=59
+2026-05-17 08:47:05 | INFO | C01 | {'order_id': 'c227653e-6b83-438b-90e9-6f1de30ec8e7', 'datetime': '2026-05-04T15:39:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '4', 'is_online': 'true', 'customer_id': 'CUST-7389', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:47:05 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:05 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:05 | INFO | C01 | consumed=59
+2026-05-17 08:47:10 | INFO | P01 | {
+  order_id: a9221080-b74d-40e9-9e6e-da3a0a4eb460
+  datetime: 2026-05-04T15:47:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7624
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Love the examples
+}
+2026-05-17 08:47:10 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:47:10 | INFO | P01 |   MESSAGE SENT  sent=60
+2026-05-17 08:47:10 | INFO | C01 | {'order_id': 'a9221080-b74d-40e9-9e6e-da3a0a4eb460', 'datetime': '2026-05-04T15:47:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7624', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Love the examples'}
+2026-05-17 08:47:10 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:10 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:10 | INFO | C01 | consumed=60
+2026-05-17 08:47:15 | INFO | P01 | {
+  order_id: f3c86d98-dc10-4fec-8f02-cc8fc351bf8c
+  datetime: 2026-05-04T15:58:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-5133
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:47:15 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:47:15 | INFO | P01 |   MESSAGE SENT  sent=61
+2026-05-17 08:47:15 | INFO | C01 | {'order_id': 'f3c86d98-dc10-4fec-8f02-cc8fc351bf8c', 'datetime': '2026-05-04T15:58:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-5133', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:47:15 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:15 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:15 | INFO | C01 | consumed=61
+2026-05-17 08:47:20 | INFO | P01 | {
+  order_id: fbc09551-b54a-4788-b015-809bbf2dd0a2
+  datetime: 2026-05-04T16:21:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4020
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Great course!
+}
+2026-05-17 08:47:20 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:47:20 | INFO | P01 |   MESSAGE SENT  sent=62
+2026-05-17 08:47:20 | INFO | C01 | {'order_id': 'fbc09551-b54a-4788-b015-809bbf2dd0a2', 'datetime': '2026-05-04T16:21:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4020', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Great course!'}
+2026-05-17 08:47:20 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:20 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:20 | INFO | C01 | consumed=62
+2026-05-17 08:47:25 | INFO | P01 | {
+  order_id: ad73fc8d-3dc9-416e-b7ae-862d8f19bda5
+  datetime: 2026-05-04T16:32:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1893
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: Great course!
+}
+2026-05-17 08:47:25 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:47:25 | INFO | P01 |   MESSAGE SENT  sent=63
+2026-05-17 08:47:25 | INFO | C01 | {'order_id': 'ad73fc8d-3dc9-416e-b7ae-862d8f19bda5', 'datetime': '2026-05-04T16:32:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1893', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Great course!'}
+2026-05-17 08:47:25 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:25 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:25 | INFO | C01 | consumed=63
+2026-05-17 08:47:30 | INFO | P01 | {
+  order_id: 952398e4-34c9-43c6-9451-d52321647803
+  datetime: 2026-05-04T16:57:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6023
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:47:30 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:47:30 | INFO | P01 |   MESSAGE SENT  sent=64
+2026-05-17 08:47:30 | INFO | C01 | {'order_id': '952398e4-34c9-43c6-9451-d52321647803', 'datetime': '2026-05-04T16:57:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6023', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:47:30 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:30 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:30 | INFO | C01 | consumed=64
+2026-05-17 08:47:35 | INFO | P01 | {
+  order_id: 2c5e0a19-8c92-49f1-873b-66f975d9ec38
+  datetime: 2026-05-04T18:07:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2858
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:47:35 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:47:35 | INFO | P01 |   MESSAGE SENT  sent=65
+2026-05-17 08:47:35 | INFO | C01 | {'order_id': '2c5e0a19-8c92-49f1-873b-66f975d9ec38', 'datetime': '2026-05-04T18:07:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2858', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:47:35 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:35 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:35 | INFO | C01 | consumed=65
+2026-05-17 08:47:40 | INFO | P01 | {
+  order_id: e5e51a38-1c78-4cc3-b0a4-ef19a95f40f0
+  datetime: 2026-05-04T18:13:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5978
+  is_new_customer: true
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:47:40 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:47:40 | INFO | P01 |   MESSAGE SENT  sent=66
+2026-05-17 08:47:40 | INFO | C01 | {'order_id': 'e5e51a38-1c78-4cc3-b0a4-ef19a95f40f0', 'datetime': '2026-05-04T18:13:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5978', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:47:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:40 | INFO | C01 | consumed=66
+2026-05-17 08:47:45 | INFO | P01 | {
+  order_id: eaa53f43-3dc2-44bf-8625-6894ba340e3a
+  datetime: 2026-05-04T18:18:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3441
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:47:45 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:47:45 | INFO | P01 |   MESSAGE SENT  sent=67
+2026-05-17 08:47:45 | INFO | C01 | {'order_id': 'eaa53f43-3dc2-44bf-8625-6894ba340e3a', 'datetime': '2026-05-04T18:18:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3441', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:47:45 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:45 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:45 | INFO | C01 | consumed=67
+2026-05-17 08:47:50 | INFO | P01 | {
+  order_id: f4ad1071-a035-4252-9394-647caea81412
+  datetime: 2026-05-04T18:21:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5871
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: email
+  discount_code: 
+  customer_note: Excellent content
+}
+2026-05-17 08:47:50 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:47:50 | INFO | P01 |   MESSAGE SENT  sent=68
+2026-05-17 08:47:50 | INFO | C01 | {'order_id': 'f4ad1071-a035-4252-9394-647caea81412', 'datetime': '2026-05-04T18:21:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5871', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Excellent content'}
+2026-05-17 08:47:50 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:50 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:50 | INFO | C01 | consumed=68
+2026-05-17 08:47:55 | INFO | P01 | {
+  order_id: ce10e8d9-c1be-4604-ace4-fcf735a9272b
+  datetime: 2026-05-04T18:58:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3870
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: social
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:47:55 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:47:55 | INFO | P01 |   MESSAGE SENT  sent=69
+2026-05-17 08:47:55 | INFO | C01 | {'order_id': 'ce10e8d9-c1be-4604-ace4-fcf735a9272b', 'datetime': '2026-05-04T18:58:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3870', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'social', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:47:55 | INFO | C01 | Processing raw local message.
+2026-05-17 08:47:55 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:47:55 | INFO | C01 | consumed=69
+2026-05-17 08:48:00 | INFO | P01 | {
+  order_id: 6b94916d-c1a0-43ee-a4bb-216838b89966
+  datetime: 2026-05-04T19:01:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-8438
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Expected more content
+}
+2026-05-17 08:48:00 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:48:00 | INFO | P01 |   MESSAGE SENT  sent=70
+2026-05-17 08:48:00 | INFO | C01 | {'order_id': '6b94916d-c1a0-43ee-a4bb-216838b89966', 'datetime': '2026-05-04T19:01:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-8438', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Expected more content'}
+2026-05-17 08:48:00 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:00 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:00 | INFO | C01 | consumed=70
+2026-05-17 08:48:05 | INFO | P01 | {
+  order_id: 4861ab40-1b19-4f0c-99d6-febd0f9cba43
+  datetime: 2026-05-04T19:04:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9494
+  is_new_customer: false
+  device_type: desktop
+  payment_method: apple_pay
+  referral_source: social
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:05 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:48:05 | INFO | P01 |   MESSAGE SENT  sent=71
+2026-05-17 08:48:05 | INFO | C01 | {'order_id': '4861ab40-1b19-4f0c-99d6-febd0f9cba43', 'datetime': '2026-05-04T19:04:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9494', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'apple_pay', 'referral_source': 'social', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:05 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:05 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:05 | INFO | C01 | consumed=71
+2026-05-17 08:48:10 | INFO | P01 | {
+  order_id: e75ec4c7-ee3b-47a1-b41a-b3483fcc3ca0
+  datetime: 2026-05-04T19:08:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5982
+  is_new_customer: false
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: email
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:48:10 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:48:10 | INFO | P01 |   MESSAGE SENT  sent=72
+2026-05-17 08:48:10 | INFO | C01 | {'order_id': 'e75ec4c7-ee3b-47a1-b41a-b3483fcc3ca0', 'datetime': '2026-05-04T19:08:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5982', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:48:10 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:10 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:10 | INFO | C01 | consumed=72
+2026-05-17 08:48:15 | INFO | P01 | {
+  order_id: c0b51b76-43f5-4de0-b5c5-5318c9dfc149
+  datetime: 2026-05-04T19:22:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6153
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:15 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:48:15 | INFO | P01 |   MESSAGE SENT  sent=73
+2026-05-17 08:48:15 | INFO | C01 | {'order_id': 'c0b51b76-43f5-4de0-b5c5-5318c9dfc149', 'datetime': '2026-05-04T19:22:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6153', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:15 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:15 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:15 | INFO | C01 | consumed=73
+2026-05-17 08:48:20 | INFO | P01 | {
+  order_id: c8e78c5a-43f4-4e8b-abf0-83e6544d6295
+  datetime: 2026-05-04T19:32:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2989
+  is_new_customer: true
+  device_type: desktop
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: Clear explanations
+}
+2026-05-17 08:48:20 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:20 | INFO | P01 |   MESSAGE SENT  sent=74
+2026-05-17 08:48:20 | INFO | C01 | {'order_id': 'c8e78c5a-43f4-4e8b-abf0-83e6544d6295', 'datetime': '2026-05-04T19:32:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2989', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Clear explanations'}
+2026-05-17 08:48:20 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:20 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:20 | INFO | C01 | consumed=74
+2026-05-17 08:48:25 | INFO | P01 | {
+  order_id: 84255838-f145-4ab4-bea2-317b796d056d
+  datetime: 2026-05-04T19:56:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-6568
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:48:25 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:25 | INFO | P01 |   MESSAGE SENT  sent=75
+2026-05-17 08:48:25 | INFO | C01 | {'order_id': '84255838-f145-4ab4-bea2-317b796d056d', 'datetime': '2026-05-04T19:56:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-6568', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:48:25 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:25 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:25 | INFO | C01 | consumed=75
+2026-05-17 08:48:30 | INFO | P01 | {
+  order_id: 588c62d0-57e6-4063-bdd0-992253e7cd9c
+  datetime: 2026-05-04T19:58:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 3
+  is_online: false
+  customer_id: CUST-4993
+  is_new_customer: false
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:30 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:48:30 | INFO | P01 |   MESSAGE SENT  sent=76
+2026-05-17 08:48:31 | INFO | C01 | {'order_id': '588c62d0-57e6-4063-bdd0-992253e7cd9c', 'datetime': '2026-05-04T19:58:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '3', 'is_online': 'false', 'customer_id': 'CUST-4993', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:31 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:31 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:31 | INFO | C01 | consumed=76
+2026-05-17 08:48:35 | INFO | P01 | {
+  order_id: 64f9b543-2419-4d39-becd-362d97338891
+  datetime: 2026-05-04T20:00:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6460
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-17 08:48:35 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:35 | INFO | P01 |   MESSAGE SENT  sent=77
+2026-05-17 08:48:35 | INFO | C01 | {'order_id': '64f9b543-2419-4d39-becd-362d97338891', 'datetime': '2026-05-04T20:00:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6460', 'is_new_customer': 'false', 'device_type': 'mobile', 'payment_method': 'paypal', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Gift for my team'}
+2026-05-17 08:48:35 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:35 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:35 | INFO | C01 | consumed=77
+2026-05-17 08:48:40 | INFO | P01 | {
+  order_id: 3f921531-78a4-4b01-b936-d9c95dadaa55
+  datetime: 2026-05-04T20:09:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6654
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:40 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:48:40 | INFO | P01 |   MESSAGE SENT  sent=78
+2026-05-17 08:48:40 | INFO | C01 | {'order_id': '3f921531-78a4-4b01-b936-d9c95dadaa55', 'datetime': '2026-05-04T20:09:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6654', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:40 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:40 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:40 | INFO | C01 | consumed=78
+2026-05-17 08:48:45 | INFO | P01 | {
+  order_id: 9c3843ef-44fb-400b-ab23-efccf184bd57
+  datetime: 2026-05-04T20:30:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3573
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:45 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:45 | INFO | P01 |   MESSAGE SENT  sent=79
+2026-05-17 08:48:46 | INFO | C01 | {'order_id': '9c3843ef-44fb-400b-ab23-efccf184bd57', 'datetime': '2026-05-04T20:30:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3573', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:46 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:46 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:46 | INFO | C01 | consumed=79
+2026-05-17 08:48:50 | INFO | P01 | {
+  order_id: b32fb0d1-313c-4c3f-a7b9-77f86b9e64fb
+  datetime: 2026-05-04T20:59:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2496
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-17 08:48:50 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:50 | INFO | P01 |   MESSAGE SENT  sent=80
+2026-05-17 08:48:50 | INFO | C01 | {'order_id': 'b32fb0d1-313c-4c3f-a7b9-77f86b9e64fb', 'datetime': '2026-05-04T20:59:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2496', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'Learning at my own pace'}
+2026-05-17 08:48:50 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:50 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:50 | INFO | C01 | consumed=80
+2026-05-17 08:48:55 | INFO | P01 | {
+  order_id: 3fb11c63-9889-4d6a-ab59-bdd87a2b1aa1
+  datetime: 2026-05-05T08:11:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 5
+  is_online: true
+  customer_id: CUST-1606
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: social
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:48:55 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:48:55 | INFO | P01 |   MESSAGE SENT  sent=81
+2026-05-17 08:48:56 | INFO | C01 | {'order_id': '3fb11c63-9889-4d6a-ab59-bdd87a2b1aa1', 'datetime': '2026-05-05T08:11:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '5', 'is_online': 'true', 'customer_id': 'CUST-1606', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'social', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:48:56 | INFO | C01 | Processing raw local message.
+2026-05-17 08:48:56 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:48:56 | INFO | C01 | consumed=81
+2026-05-17 08:49:00 | INFO | P01 | {
+  order_id: 9d4b9c84-0a80-4843-860e-6d6bd48cb8e4
+  datetime: 2026-05-05T08:19:00Z
+  region_id: MX-CMX
+  currency_code: MXN
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-6188
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: 
+  customer_note: For my study group
+}
+2026-05-17 08:49:00 | INFO | P01 |   Sending local message with key=MX-CMX
+2026-05-17 08:49:00 | INFO | P01 |   MESSAGE SENT  sent=82
+2026-05-17 08:49:00 | INFO | C01 | {'order_id': '9d4b9c84-0a80-4843-860e-6d6bd48cb8e4', 'datetime': '2026-05-05T08:19:00Z', 'region_id': 'MX-CMX', 'currency_code': 'MXN', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-6188', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': 'For my study group'}
+2026-05-17 08:49:00 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:00 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:00 | INFO | C01 | consumed=82
+2026-05-17 08:49:05 | INFO | P01 | {
+  order_id: fbb258c6-5219-48b4-9d00-1984e98201e6
+  datetime: 2026-05-05T08:32:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3529
+  is_new_customer: false
+  device_type: tablet
+  payment_method: apple_pay
+  referral_source: paid_search
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:49:05 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:49:05 | INFO | P01 |   MESSAGE SENT  sent=83
+2026-05-17 08:49:06 | INFO | C01 | {'order_id': 'fbb258c6-5219-48b4-9d00-1984e98201e6', 'datetime': '2026-05-05T08:32:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3529', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'apple_pay', 'referral_source': 'paid_search', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:49:06 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:06 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:06 | INFO | C01 | consumed=83
+2026-05-17 08:49:10 | INFO | P01 | {
+  order_id: c0e557be-ebbb-4483-a040-5483a2af1bfc
+  datetime: 2026-05-05T09:25:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-7730
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: organic
+  discount_code: 
+  customer_note: 
+}
+2026-05-17 08:49:10 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:49:10 | INFO | P01 |   MESSAGE SENT  sent=84
+2026-05-17 08:49:11 | INFO | C01 | {'order_id': 'c0e557be-ebbb-4483-a040-5483a2af1bfc', 'datetime': '2026-05-05T09:25:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-7730', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'organic', 'discount_code': '', 'customer_note': ''}
+2026-05-17 08:49:11 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:11 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:11 | INFO | C01 | consumed=84
+2026-05-17 08:49:16 | INFO | P01 | {
+  order_id: 11482de3-c5f5-4337-a6be-81e0ac8741f4
+  datetime: 2026-05-05T09:31:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-4945
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: 
+  customer_note: Worth every penny
+}
+2026-05-17 08:49:16 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:49:16 | INFO | P01 |   MESSAGE SENT  sent=85
+2026-05-17 08:49:16 | INFO | C01 | {'order_id': '11482de3-c5f5-4337-a6be-81e0ac8741f4', 'datetime': '2026-05-05T09:31:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-4945', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': '', 'customer_note': 'Worth every penny'}
+2026-05-17 08:49:16 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:16 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:16 | INFO | C01 | consumed=85
+2026-05-17 08:49:21 | INFO | P01 | {
+  order_id: aa0ac5f3-f4e1-4804-aaf5-678cb1ffab35
+  datetime: 2026-05-05T09:51:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-5806
+  is_new_customer: true
+  device_type: desktop
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: Expected more content
+}
+2026-05-17 08:49:21 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:49:21 | INFO | P01 |   MESSAGE SENT  sent=86
+2026-05-17 08:49:21 | INFO | C01 | {'order_id': 'aa0ac5f3-f4e1-4804-aaf5-678cb1ffab35', 'datetime': '2026-05-05T09:51:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-5806', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Expected more content'}
+2026-05-17 08:49:21 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:21 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:21 | INFO | C01 | consumed=86
+2026-05-17 08:49:26 | INFO | P01 | {
+  order_id: 5e800459-007a-4280-b11b-6c0251bd597c
+  datetime: 2026-05-05T10:07:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-9955
+  is_new_customer: false
+  device_type: desktop
+  payment_method: apple_pay
+  referral_source: organic
+  discount_code: 
+  customer_note: Great course!
+}
+2026-05-17 08:49:26 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:49:26 | INFO | P01 |   MESSAGE SENT  sent=87
+2026-05-17 08:49:26 | INFO | C01 | {'order_id': '5e800459-007a-4280-b11b-6c0251bd597c', 'datetime': '2026-05-05T10:07:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-9955', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'apple_pay', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Great course!'}
+2026-05-17 08:49:26 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:26 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:26 | INFO | C01 | consumed=87
+2026-05-17 08:49:31 | INFO | P01 | {
+  order_id: a3380bb4-539a-4759-b363-d1fd1f399632
+  datetime: 2026-05-05T10:40:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2480
+  is_new_customer: true
+  device_type: tablet
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Recommended by a colleague
+}
+2026-05-17 08:49:31 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:49:31 | INFO | P01 |   MESSAGE SENT  sent=88
+2026-05-17 08:49:31 | INFO | C01 | {'order_id': 'a3380bb4-539a-4759-b363-d1fd1f399632', 'datetime': '2026-05-05T10:40:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2480', 'is_new_customer': 'true', 'device_type': 'tablet', 'payment_method': 'paypal', 'referral_source': 'organic', 'discount_code': '', 'customer_note': 'Recommended by a colleague'}
+2026-05-17 08:49:31 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:31 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:31 | INFO | C01 | consumed=88
+2026-05-17 08:49:36 | INFO | P01 | {
+  order_id: 30d8f3f2-e499-4a31-9a28-cb14259cf4ba
+  datetime: 2026-05-05T11:08:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1710
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: SPRING25
+  customer_note: Gifting this to my team
+}
+2026-05-17 08:49:36 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:49:36 | INFO | P01 |   MESSAGE SENT  sent=89
+2026-05-17 08:49:36 | INFO | C01 | {'order_id': '30d8f3f2-e499-4a31-9a28-cb14259cf4ba', 'datetime': '2026-05-05T11:08:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1710', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': 'SPRING25', 'customer_note': 'Gifting this to my team'}
+2026-05-17 08:49:36 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:36 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:36 | INFO | C01 | consumed=89
+2026-05-17 08:49:41 | INFO | P01 | {
+  order_id: 428171bf-e203-41b8-a1b0-339f9a76359f
+  datetime: 2026-05-05T11:39:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: false
+  customer_id: CUST-8538
+  is_new_customer: true
+  device_type: desktop
+  payment_method: gift_card
+  referral_source: organic
+  discount_code: SPRING25
+  customer_note: Great deal!
+}
+2026-05-17 08:49:41 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:49:41 | INFO | P01 |   MESSAGE SENT  sent=90
+2026-05-17 08:49:41 | INFO | C01 | {'order_id': '428171bf-e203-41b8-a1b0-339f9a76359f', 'datetime': '2026-05-05T11:39:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'false', 'customer_id': 'CUST-8538', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'gift_card', 'referral_source': 'organic', 'discount_code': 'SPRING25', 'customer_note': 'Great deal!'}
+2026-05-17 08:49:41 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:41 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:41 | INFO | C01 | consumed=90
+2026-05-17 08:49:46 | INFO | P01 | {
+  order_id: b0dbe64c-d31f-4596-9ed8-c71da9c4ebc2
+  datetime: 2026-05-05T11:47:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 5
+  is_online: true
+  customer_id: CUST-5846
+  is_new_customer: true
+  device_type: mobile
+  payment_method: credit_card
+  referral_source: paid_search
+  discount_code: SPRING25
+  customer_note: Excellent content
+}
+2026-05-17 08:49:46 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:49:46 | INFO | P01 |   MESSAGE SENT  sent=91
+2026-05-17 08:49:46 | INFO | C01 | {'order_id': 'b0dbe64c-d31f-4596-9ed8-c71da9c4ebc2', 'datetime': '2026-05-05T11:47:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '5', 'is_online': 'true', 'customer_id': 'CUST-5846', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'credit_card', 'referral_source': 'paid_search', 'discount_code': 'SPRING25', 'customer_note': 'Excellent content'}
+2026-05-17 08:49:46 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:46 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:46 | INFO | C01 | consumed=91
+2026-05-17 08:49:51 | INFO | P01 | {
+  order_id: 17b4eac7-1b8a-4695-8111-72c1d25c38f8
+  datetime: 2026-05-05T11:48:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6731
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: email
+  discount_code: SPRING25
+  customer_note: Bought two courses with this deal
+}
+2026-05-17 08:49:51 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:49:51 | INFO | P01 |   MESSAGE SENT  sent=92
+2026-05-17 08:49:51 | INFO | C01 | {'order_id': '17b4eac7-1b8a-4695-8111-72c1d25c38f8', 'datetime': '2026-05-05T11:48:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6731', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': 'SPRING25', 'customer_note': 'Bought two courses with this deal'}
+2026-05-17 08:49:51 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:51 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:51 | INFO | C01 | consumed=92
+2026-05-17 08:49:56 | INFO | P01 | {
+  order_id: 5fbd05e9-b2da-4a03-9bc8-86048207abaf
+  datetime: 2026-05-05T11:49:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-4289
+  is_new_customer: true
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: social
+  discount_code: SPRING25
+  customer_note: Gifting this to my team
+}
+2026-05-17 08:49:56 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:49:56 | INFO | P01 |   MESSAGE SENT  sent=93
+2026-05-17 08:49:56 | INFO | C01 | {'order_id': '5fbd05e9-b2da-4a03-9bc8-86048207abaf', 'datetime': '2026-05-05T11:49:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-NLP-006', 'unit_price': '54.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-4289', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'social', 'discount_code': 'SPRING25', 'customer_note': 'Gifting this to my team'}
+2026-05-17 08:49:56 | INFO | C01 | Processing raw local message.
+2026-05-17 08:49:56 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:49:56 | INFO | C01 | consumed=93
+2026-05-17 08:50:01 | INFO | P01 | {
+  order_id: 9650209c-dffb-44ed-b9ac-8f9ad3958d48
+  datetime: 2026-05-05T11:51:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-SQL-004
+  unit_price: 44.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-3712
+  is_new_customer: false
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: social
+  discount_code: SPRING25
+  customer_note: For my study group
+}
+2026-05-17 08:50:01 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:50:01 | INFO | P01 |   MESSAGE SENT  sent=94
+2026-05-17 08:50:01 | INFO | C01 | {'order_id': '9650209c-dffb-44ed-b9ac-8f9ad3958d48', 'datetime': '2026-05-05T11:51:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-SQL-004', 'unit_price': '44.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-3712', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': 'SPRING25', 'customer_note': 'For my study group'}
+2026-05-17 08:50:01 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:01 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:01 | INFO | C01 | consumed=94
+2026-05-17 08:50:06 | INFO | P01 | {
+  order_id: 294cd274-7557-44e8-9b0b-a5b7aa906985
+  datetime: 2026-05-05T11:54:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1803
+  is_new_customer: true
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: social
+  discount_code: SPRING25
+  customer_note: Just what I needed
+}
+2026-05-17 08:50:06 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:50:06 | INFO | P01 |   MESSAGE SENT  sent=95
+2026-05-17 08:50:06 | INFO | C01 | {'order_id': '294cd274-7557-44e8-9b0b-a5b7aa906985', 'datetime': '2026-05-05T11:54:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-DATA-002', 'unit_price': '49.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-1803', 'is_new_customer': 'true', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': 'SPRING25', 'customer_note': 'Just what I needed'}
+2026-05-17 08:50:06 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:06 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:06 | INFO | C01 | consumed=95
+2026-05-17 08:50:11 | INFO | P01 | {
+  order_id: 6bec3e65-27e6-4374-81c2-f70c2a8322e4
+  datetime: 2026-05-05T11:58:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-2557
+  is_new_customer: true
+  device_type: desktop
+  payment_method: credit_card
+  referral_source: email
+  discount_code: SPRING25
+  customer_note: Sharing with friends
+}
+2026-05-17 08:50:11 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-17 08:50:11 | INFO | P01 |   MESSAGE SENT  sent=96
+2026-05-17 08:50:11 | INFO | C01 | {'order_id': '6bec3e65-27e6-4374-81c2-f70c2a8322e4', 'datetime': '2026-05-05T11:58:00Z', 'region_id': 'US-TX', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '3', 'is_online': 'true', 'customer_id': 'CUST-2557', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'credit_card', 'referral_source': 'email', 'discount_code': 'SPRING25', 'customer_note': 'Sharing with friends'}
+2026-05-17 08:50:11 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:11 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:11 | INFO | C01 | consumed=96
+2026-05-17 08:50:16 | INFO | P01 | {
+  order_id: 456700b3-71ae-49f3-b40e-e197064c021a
+  datetime: 2026-05-05T12:02:00Z
+  region_id: US-CA
+  currency_code: USD
+  product_id: PY-INTRO-001
+  unit_price: 29.99
+  quantity: 2
+  is_online: true
+  customer_id: CUST-3352
+  is_new_customer: true
+  device_type: mobile
+  payment_method: apple_pay
+  referral_source: social
+  discount_code: SPRING25
+  customer_note: Gift for my team
+}
+2026-05-17 08:50:16 | INFO | P01 |   Sending local message with key=US-CA
+2026-05-17 08:50:16 | INFO | P01 |   MESSAGE SENT  sent=97
+2026-05-17 08:50:16 | INFO | C01 | {'order_id': '456700b3-71ae-49f3-b40e-e197064c021a', 'datetime': '2026-05-05T12:02:00Z', 'region_id': 'US-CA', 'currency_code': 'USD', 'product_id': 'PY-INTRO-001', 'unit_price': '29.99', 'quantity': '2', 'is_online': 'true', 'customer_id': 'CUST-3352', 'is_new_customer': 'true', 'device_type': 'mobile', 'payment_method': 'apple_pay', 'referral_source': 'social', 'discount_code': 'SPRING25', 'customer_note': 'Gift for my team'}
+2026-05-17 08:50:16 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:16 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:16 | INFO | C01 | consumed=97
+2026-05-17 08:50:21 | INFO | P01 | {
+  order_id: 3cfeff27-d69e-4e46-8b75-c16a3b1d3d24
+  datetime: 2026-05-05T12:03:00Z
+  region_id: CA-ON
+  currency_code: CAD
+  product_id: PY-VIZ-003
+  unit_price: 39.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-6374
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: social
+  discount_code: SPRING25
+  customer_note: Love the discount!
+}
+2026-05-17 08:50:21 | INFO | P01 |   Sending local message with key=CA-ON
+2026-05-17 08:50:21 | INFO | P01 |   MESSAGE SENT  sent=98
+2026-05-17 08:50:21 | INFO | C01 | {'order_id': '3cfeff27-d69e-4e46-8b75-c16a3b1d3d24', 'datetime': '2026-05-05T12:03:00Z', 'region_id': 'CA-ON', 'currency_code': 'CAD', 'product_id': 'PY-VIZ-003', 'unit_price': '39.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-6374', 'is_new_customer': 'false', 'device_type': 'desktop', 'payment_method': 'paypal', 'referral_source': 'social', 'discount_code': 'SPRING25', 'customer_note': 'Love the discount!'}
+2026-05-17 08:50:21 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:21 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:21 | INFO | C01 | consumed=98
+2026-05-17 08:50:26 | INFO | P01 | {
+  order_id: 6e001c71-e65f-437a-9be4-b210ec5c48aa
+  datetime: 2026-05-05T12:07:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2886
+  is_new_customer: true
+  device_type: desktop
+  payment_method: gift_card
+  referral_source: paid_search
+  discount_code: SPRING25
+  customer_note: Already applying this at work
+}
+2026-05-17 08:50:26 | INFO | P01 |   Sending local message with key=CA-QC
+2026-05-17 08:50:26 | INFO | P01 |   MESSAGE SENT  sent=99
+2026-05-17 08:50:26 | INFO | C01 | {'order_id': '6e001c71-e65f-437a-9be4-b210ec5c48aa', 'datetime': '2026-05-05T12:07:00Z', 'region_id': 'CA-QC', 'currency_code': 'CAD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2886', 'is_new_customer': 'true', 'device_type': 'desktop', 'payment_method': 'gift_card', 'referral_source': 'paid_search', 'discount_code': 'SPRING25', 'customer_note': 'Already applying this at work'}
+2026-05-17 08:50:26 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:26 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:26 | INFO | C01 | consumed=99
+2026-05-17 08:50:31 | INFO | P01 | {
+  order_id: 5e8e0db6-5d82-4cb0-9b2c-8a5e50e1f144
+  datetime: 2026-05-05T12:15:00Z
+  region_id: US-MO
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2337
+  is_new_customer: false
+  device_type: tablet
+  payment_method: credit_card
+  referral_source: social
+  discount_code: 
+  customer_note: Highly recommend
+}
+2026-05-17 08:50:31 | INFO | P01 |   Sending local message with key=US-MO
+2026-05-17 08:50:31 | INFO | P01 |   MESSAGE SENT  sent=100
+2026-05-17 08:50:31 | INFO | C01 | {'order_id': '5e8e0db6-5d82-4cb0-9b2c-8a5e50e1f144', 'datetime': '2026-05-05T12:15:00Z', 'region_id': 'US-MO', 'currency_code': 'USD', 'product_id': 'PY-STREAM-005', 'unit_price': '59.99', 'quantity': '1', 'is_online': 'true', 'customer_id': 'CUST-2337', 'is_new_customer': 'false', 'device_type': 'tablet', 'payment_method': 'credit_card', 'referral_source': 'social', 'discount_code': '', 'customer_note': 'Highly recommend'}
+2026-05-17 08:50:31 | INFO | C01 | Processing raw local message.
+2026-05-17 08:50:32 | INFO | C01 | MESSAGE CONSUMED
+2026-05-17 08:50:32 | INFO | C01 | consumed=100
+2026-05-17 08:50:36 | INFO | P01 | ========================
+2026-05-17 08:50:36 | INFO | P01 | SECTION E. Exit
+2026-05-17 08:50:36 | INFO | P01 | ========================
+2026-05-17 08:50:36 | INFO | P01 | Summary:
+2026-05-17 08:50:36 | INFO | P01 | Sent 100 message(s).
+2026-05-17 08:50:36 | INFO | P01 | WROTE TOPIC_CSV = data/output/streaming-01-foundations-case.csv
+2026-05-17 08:50:36 | INFO | P01 | ========================
+2026-05-17 08:50:36 | INFO | P01 | Producer executed successfully!
+2026-05-17 08:50:36 | INFO | P01 | ========================
+2026-05-17 08:50:52 | INFO | C01 | No new message received within 20.0s timeout.
+2026-05-17 08:50:52 | INFO | C01 | Producer finished or paused. Stopping consumer.
+2026-05-17 08:50:52 | INFO | C01 | Saving artifacts...
+2026-05-17 08:50:52 | INFO | C01 | WROTE OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:50:52 | INFO | C01 | ========================
+2026-05-17 08:50:52 | INFO | C01 | SECTION E. Exit
+2026-05-17 08:50:52 | INFO | C01 | ========================
+2026-05-17 08:50:52 | INFO | C01 | Summary:
+2026-05-17 08:50:52 | INFO | C01 | Consumed 100 message(s).
+2026-05-17 08:50:52 | INFO | C01 | OUTPUT_CSV = data/output/consumed_sales.csv
+2026-05-17 08:50:52 | INFO | C01 | ========================
+2026-05-17 08:50:52 | INFO | C01 | Consumer executed successfully!
+2026-05-17 08:50:52 | INFO | C01 | ========================
